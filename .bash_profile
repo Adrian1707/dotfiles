@@ -24,15 +24,18 @@ alias rs='bundle exec rails s'
 alias wp='cd ~/workspace/vagabond/workspace/projects/frontend/webpack;npm run start'
 alias rc='bundle exec rails c' 
 alias ls='ls -Gp'
-alias bsh='open ~/.bash_profile'
-alias vimrc='vim ~/.vimrc'
+alias bsh='vim ~/dotfiles/.bash_profile'
+alias vimrc='vim ~/dotfiles/.vimrc'
 
 
 # SSH ALIASES
-alias lb1='ssh adrianbooth@lb-staging01.palatinategroup.com'
-alias lb2='ssh adrianbooth@lb-staging02.palatinategroup.com'
-alias lb1t='echo Port forwarding to localhost:19999;ssh www-data@lb03.palatinategroup.com -L19999:localhost:9999'
-alias lb2t='echo Port forwarding to localhost:29999;ssh www-data@lb04.palatinategroup.com -L29999:localhost:9999'
+alias stglb='ssh adrianbooth@lb-staging01.palatinategroup.com'
+alias lb1='ssh www-data@lb03.palatinategroup.com' 
+alias lb2='ssh www-data@lb04.palatinategroup.com' 
+alias lb1cache='lb1 sudo varnishadm ban.url .'
+alias lb2cache='lb2 sudo varnishadm ban.url .'
+alias lb1t='echo Port forwarding to localhost:19999; lb1 -L19999:localhost:9999'
+alias lb2t='echo Port forwarding to localhost:29999; lb2 -L29999:localhost:9999'
 alias sshlbstg="ssh adrianbooth@lb-staging01.palatinategroup.com"
 alias varnish="sshlbstg -t 'sudo varnishadm ban.url .'"
 alias sshstaging='echo Port forwarding to localhost:4999;ssh www-data@ygt-staging02.yourgolftravel.com -L4999:localhost:5984'

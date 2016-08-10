@@ -14,7 +14,8 @@ set backspace=2
 " Highlight searches when searching
 set hlsearch
 set number
-
+" highlight cursor line 
+set cul
 " Remap jj to escape insert mode
 inoremap jj <ESC>
 "Allow copy and paste to work
@@ -95,5 +96,5 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 nmap <Tab> :bnext<CR>
 
 "Map space key and w to save
-nnoremap <Space>w :w<CR>
+nnoremap <Space>s :w<CR>
 nnoremap <Space>q :q<CR>
