@@ -32,6 +32,8 @@ alias ls='ls -Gp'
 alias bsh='vim ~/dotfiles/.bash_profile'
 alias vimrc='vim ~/dotfiles/.vimrc'
 
+#Sets up specific dev environemnt for YGT in Tmux session
+alias dev='tmux source-file ~/dotfiles/tmux_conf'
 
 # SSH ALIASES
 alias stglb='ssh adrianbooth@lb-staging01.palatinategroup.com'
@@ -46,7 +48,8 @@ alias varnish="sshlbstg -t 'sudo varnishadm ban.url .'"
 alias sshstaging='echo Port forwarding to localhost:4999;ssh www-data@ygt-staging02.yourgolftravel.com -L4999:localhost:5984'
 alias salesdb='echo Port forwarding to localhost:5985;ssh www-data@sales01.palatinate.local -L5985:127.0.0.1:5984'
 alias ygtdb='echo "Port forwarding couchdb02 to 5984:3999"; ssh www-data@admin-actual.yourgolftravel.com -L3999:couchdb02:5984'
-
+alias ssh03="ssh www-data@ygt-frontend03.yourgolftravel.com"
+alias ssh04="ssh www-data@ygt-frontend04.yourgolftravel.com"
 # GIT ALIASES
 alias gco='git checkout'
 alias fuckit='git stash'
@@ -107,3 +110,4 @@ export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 
 
 export PATH="$PATH:/Users/adrianbooth/Desktop/"
+
