@@ -1,7 +1,7 @@
+new-session
 unbind C-b
 set -g prefix `
 bind-key ` send-prefix
-
 # move around panes with hjkl, as one would in vim after pressing ctrl-w
 bind h select-pane -L
 bind j select-pane -D
@@ -14,10 +14,11 @@ splitw -h -p 50 # split it into two halves
 selectp -t 1 # select the new, second (1) pane
 splitw -v -p 50 # split it into two halves
 selectp -t 0
-send-keys -t 0 'vm' enter
+send-keys -t 0 'p' enter
+send-keys -t 0 'p frontend' enter
 send-keys -t 2 'wp' enter
-send-keys -t 1 'p' enter
-send-keys -t 1 'p frontend' enter
+send-keys -t 1 'vm' enter
+
 
 # split windows like vim
 # vim's definition of a horizontal/vertical split is reversed from tmux's
@@ -29,3 +30,4 @@ set -g mouse on
 
 # Enable history
 set -g history-limit 100000
+bind -n WheelUpPane if-shell -F -t = "#{mouse_any_flag}" "send-keys -M" "if -Ft= '#{pane_in_mode}' 'send-keys -M' 'copy-mode -e; send-keys -M'"
