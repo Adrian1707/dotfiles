@@ -1,4 +1,3 @@
-new-session
 unbind C-b
 set -g prefix `
 bind-key ` send-prefix
@@ -8,19 +7,6 @@ bind j select-pane -D
 bind k select-pane -U
 bind l select-pane -R
 
-#set up default panes for dev setup and run commands to start servers
-selectp -t 0 # select the first (0) pane
-splitw -h -p 50 # split it into two halves
-selectp -t 1 # select the new, second (1) pane
-splitw -v -p 50 # split it into two halves
-selectp -t 0
-send-keys -t 0 'p' enter
-send-keys -t 0 'p frontend' enter
-send-keys -t 2 'wp' enter
-send-keys -t 1 'vm' enter
-
-
-# split windows like vim
 # vim's definition of a horizontal/vertical split is reversed from tmux's
 bind s split-window -v
 bind v split-window -h

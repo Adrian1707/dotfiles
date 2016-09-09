@@ -26,6 +26,8 @@ inoremap jj <ESC> :w<CR>
 "Allow copy and paste to work
 set clipboard=unnamed
 
+" allow basic mouse functionality
+set mouse=a
 au VimEnter *  NERDTree
 " size of a hard tabstop
 " always uses spaces instead of tab characters

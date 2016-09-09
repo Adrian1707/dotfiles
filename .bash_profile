@@ -33,9 +33,8 @@ alias bsh='vim ~/dotfiles/.bash_profile'
 alias vimrc='vim ~/dotfiles/.vimrc'
 alias tmuxconf='vim ~/dotfiles/tmux_conf'
 
-#Sets up specific dev environemnt for YGT in Tmux session
-alias dev='tmux source-file ~/dotfiles/tmux_conf'
-alias tm='tmux attach || tmux new'
+#Sets up specific dev environment for YGT in Tmux session
+alias dev='$HOME/dotfiles/.tmux-dev.sh'
 # SSH ALIASES
 alias stglb='ssh adrianbooth@lb-staging01.palatinategroup.com'
 alias lb1='ssh www-data@lb03.palatinategroup.com'
