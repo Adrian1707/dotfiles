@@ -68,7 +68,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 " Using Ag with ack.vim for global search
-let g:ackprg = 'ag --nogroup --nocolor --column'
+let g:ackprg = 'ag --nogroup --nocolor --column  --ignore-dir app/assets/javascripts/* --ignore-dir log/* --ignore node_modules --ignore-dir "./public/stylesheets/*'
 
 " fugitive git bindings
  nmap <space>ga :Git add %:p<CR><CR>
