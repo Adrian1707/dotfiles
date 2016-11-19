@@ -9,9 +9,11 @@ alias vimrc='vim ~/dotfiles/.vimrc'
 alias tmc='vim ~/dotfiles/tmux_conf'
 alias tmkill='tmux kill-server'
 alias ..='cd ..'
+
 #Sets up specific dev environment for YGT in Tmux session
 # alias tm='$HOME/dotfiles/.tmux-dev.sh' old alias to run dev script in tmux
 alias tm='tmux attach' #this is the new alias to start tmux and run the servers
+
 # SSH ALIASES
 alias stglb='ssh adrianbooth@lb-staging01.palatinategroup.com'
 alias lb1='ssh www-data@lb03.palatinategroup.com'
@@ -44,8 +46,6 @@ __git_complete gco _git_checkout
 alias notes='open ~/workspace/vagabond/workspace/frontend_notes'
 alias vm="cd ~/workspace/vagabond/ && vagrant up ygt_frontend && vagrant ssh ygt_frontend -c 'cd workspace/searcher && jruby -S bundle exec rackup' -- -L5984:localhost:5984"
 
-
 # YGT DEPLOYMENT
-
 alias staging='bundle exec cap staging deploy'
 
