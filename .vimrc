@@ -25,7 +25,7 @@ set hidden
 inoremap jj <ESC> :w<CR>
 "Allow copy and paste to work
 set clipboard=unnamed
-
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/.tmp/*,*/.sass-cache/*,*/node_modules/*,*.keep,*.DS_Store,*/.git/*
 " allow basic mouse functionality
 set mouse=a
 au VimEnter *  NERDTree

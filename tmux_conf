@@ -1,5 +1,4 @@
-new-session
-unbind C-b
+# unbind C-b
 set -g prefix `
 bind-key ` send-prefix
 # move around panes with hjkl, as one would in vim after pressing ctrl-w
@@ -8,7 +7,10 @@ bind j select-pane -D
 bind k select-pane -U
 bind l select-pane -R
 
-# pane setup for YGT DEV
+
+# # pane setup for YGT DEV: UNCOMMENT WHEN STARTING TMATE
+
+new-session
 selectp -t 0 # select the first (0) pane
 splitw -h -p 25 # split it into two halves
 selectp -t 1
