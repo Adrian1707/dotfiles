@@ -1,6 +1,6 @@
-source ~/git-completion.bash
-. ~/.bash_aliases
-. ~/.bash_functions.sh
+for file in ~/.{git-completion.bash,bash_aliases,bash_functions.sh}; do
+	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
 
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
@@ -24,5 +24,8 @@ export CLICOLOR=1
 export TERM=xterm-256color
 export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 
-export PATH="$PATH:/Users/adrianbooth/Desktop/"
+# export PATH="$PATH:/Users/adrianbooth/Desktop/"
 
+export GOPATH="/Users/adrianbooth/go/"
+
+export PATH="$GOPATH/bin:$PATH"
