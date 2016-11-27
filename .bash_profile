@@ -29,3 +29,6 @@ export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 export GOPATH="/Users/adrianbooth/go/"
 
 export PATH="$GOPATH/bin:$PATH"
+
+bind '"\C-b":backward-word' #map Ctrl-b to back one word
+bind '"\C-f":forward-word' # map Ctrl-w to forward one word
