@@ -16,10 +16,14 @@ splitw -h -p 25 # split it into two halves
 selectp -t 1
 splitw -v -p 50
 selectp -t 1
-send-keys -t 1 'vm' enter
-send-keys -t 2 'wp' enter
+splitw -v -p 50
+send-keys -t 1 'couchdb -b' enter
+send-keys -t 2 'cd ~'
+send-keys -t 2 'cd /usr/local/Cellar/couchdb-lucene/1.1.0/bin' enter
+send-keys -t 2 'cl_run' enter
+send-keys -t 3 'wp' enter
 send-keys -t 0 'p frontend' enter
-send-keys -t 0 'rs'
+send-keys -t 0 'rs' enter
 selectp -t 0
 
 # vim's definition of a horizontal/vertical split is reversed from tmux's

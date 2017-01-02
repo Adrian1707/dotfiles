@@ -71,19 +71,22 @@ filetype plugin indent on    " required
 let g:ackprg = 'ag --nogroup --nocolor --column  --ignore-dir app/assets/javascripts/* --ignore-dir log/* --ignore node_modules --ignore-dir "./public/stylesheets/*'
 
 " fugitive git bindings
- nmap <space>ga :Git add %:p<CR><CR>
- nmap <space>gs :Gstatus<CR>
- nmap <space>gc :Gcommit -v -q<CR>
- nmap <space>gd :Gdiff<CR>
- nmap <space>gl :silent! Glog<CR>:bot copen<CR>
- nmap <space>gb :Git branch<Space>
- nmap <space>gco :Git checkout<Space>
- nmap <space>gbl :Gblame <Space>
+nmap <space>ga :Git add %:p<CR><CR>
+nmap <space>gs :Gstatus<CR>
+nmap <space>gc :Gcommit -v -q<CR>
+nmap <space>gd :Gdiff<CR>
+nmap <space>gl :silent! Glog<CR>:bot copen<CR>
+nmap <space>gb :Git branch<Space>
+nmap <space>gco :Git checkout<Space>
+nmap <space>gbl :Gblame <Space>
 
 
 " bind K to grep word under cursor
 nmap K :Ag "\b<C-R><C-W>\b"<CR>:cw<CR>
 nmap <space>f :Ag<space>
+
+" enter a command to substitute all occurrences of the word under the cursor
+nnoremap <space>r :%s/\<<C-r><C-w>\>/
 
 " Bind the space and b key to buffers list
 cmap <space>b :buffers<CR>:buffer<Space>
