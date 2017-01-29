@@ -40,7 +40,8 @@ autocmd BufWritePre * :%s/\s\+$//e " Delete trailing spaces
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " Set colorscheme
-colorscheme Monokai
+colorscheme gruvbox
+set background=dark
 " Zoom plugin to make a tab full screen
 nmap <C-W>z <Plug>ZoomWin
 " YouCompleteMe setup
@@ -64,6 +65,8 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'luochen1990/rainbow'
 Plugin 'tpope/vim-surround'
+Plugin 'elmcast/elm-vim'
+Plugin 'thoughtbot/vim-rspec'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -80,6 +83,10 @@ nmap <space>gb :Git branch<Space>
 nmap <space>gco :Git checkout<Space>
 nmap <space>gbl :Gblame <Space>
 
+" RSpec.vim mappings
+let g:rspec_command = "!bundle exec rspec --drb {spec} -fd"
+map <space>t :call RunCurrentSpecFile()<CR>
+map <space>n :call RunNearestSpec()<CR>
 
 " bind K to grep word under cursor
 nmap K :Ag "\b<C-R><C-W>\b"<CR>:cw<CR>

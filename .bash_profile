@@ -27,8 +27,11 @@ export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 # export PATH="$PATH:/Users/adrianbooth/Desktop/"
 
 export GOPATH="/Users/adrianbooth/go/"
+# export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Versions/Current/Commands/java"
 
-export PATH="$GOPATH/bin:$PATH"
+# export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Versions/Current/Commands/java"
+
+export PATH="$JAVA_HOME/bin:$PATH"
 
 bind '"\C-b":backward-word' #map Ctrl-b to back one word
 bind '"\C-f":forward-word' # map Ctrl-w to forward one word

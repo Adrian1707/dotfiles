@@ -1,4 +1,3 @@
-
 #ls directory once inside it
 function cd {
     builtin cd "$@" && ls

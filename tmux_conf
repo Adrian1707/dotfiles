@@ -8,6 +8,19 @@ bind k select-pane -U
 bind l select-pane -R
 
 
+
+# vim's definition of a horizontal/vertical split is reversed from tmux's
+bind s split-window -v
+bind v split-window -h
+
+# Enable mouse mode (tmux 2.1 and above)
+set -g mouse on
+
+# Enable history
+set -g history-limit 100000
+bind -n WheelUpPane if-shell -F -t = "#{mouse_any_flag}" "send-keys -M" "if -Ft= '#{pane_in_mode}' 'send-keys -M' 'copy-mode -e; send-keys -M'"
+
+
 # # pane setup for YGT DEV: UNCOMMENT WHEN STARTING TMATE
 
 new-session
@@ -25,14 +38,3 @@ send-keys -t 3 'wp' enter
 send-keys -t 0 'p frontend' enter
 send-keys -t 0 'rs' enter
 selectp -t 0
-
-# vim's definition of a horizontal/vertical split is reversed from tmux's
-bind s split-window -v
-bind v split-window -h
-
-# Enable mouse mode (tmux 2.1 and above)
-set -g mouse on
-
-# Enable history
-set -g history-limit 100000
-bind -n WheelUpPane if-shell -F -t = "#{mouse_any_flag}" "send-keys -M" "if -Ft= '#{pane_in_mode}' 'send-keys -M' 'copy-mode -e; send-keys -M'"
