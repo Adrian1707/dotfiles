@@ -1,0 +1,30 @@
+let g:netrw_altv = 1
+let g:netrw_liststyle = 3
+set splitright
+set splitbelow
+set autoindent " Set autoindenting
+set tabstop=2
+" Indents will have a width of 2
+set shiftwidth=2
+" Make backspace work like it should
+set backspace=2
+" Highlight searches when searching
+set hlsearch
+set incsearch "search as characters are entered
+set number
+" highlight cursor line
+set cul
+" allow buffers to go into the background without needing to save
+set hidden
+"Allow copy and paste to work
+set clipboard=unnamed
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/.tmp/*,*/.sass-cache/*,*/node_modules/*,*.keep,*.DS_Store,*/.git/*
+" allow basic mouse functionality
+set mouse=a
+au VimEnter *  NERDTree
+" size of a hard tabstop
+" always uses spaces instead of tab characters
+set expandtab
+"Do not enter Ex mode ever
+nmap Q <nop>
+

@@ -31,3 +31,5 @@ nmap <Space>c gc
 " Bind the space and b key to buffers list
 cmap <space>b :buffers<CR>:buffer<Space>
 
+" Remap jj to escape insert mode and save when exiting insert mode
+inoremap jj <ESC> :w<CR>

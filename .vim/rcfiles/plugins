@@ -1,0 +1,23 @@
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+
+" Plugin for colorschemes
+Plugin 'flazz/vim-colorschemes'
+"Plugin for autocomplete
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'rking/ag.vim'
+Plugin 'mtscout6/vim-cjsx'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'luochen1990/rainbow'
+Plugin 'tpope/vim-surround'
+Plugin 'elmcast/elm-vim'
+Plugin 'thoughtbot/vim-rspec'
+call vundle#end()            " required
+filetype plugin indent on    " required
+filetype plugin on
+
