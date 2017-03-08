@@ -30,7 +30,7 @@ selectp -t 1
 splitw -v -p 50
 selectp -t 1
 splitw -v -p 50
-send-keys -t 1 'couchdb -b' enter
+send-keys -t 1 'couchdb' enter
 send-keys -t 2 'cd ~'
 send-keys -t 2 'cd /usr/local/Cellar/couchdb-lucene/1.1.0/bin' enter
 send-keys -t 2 'cl_run' enter

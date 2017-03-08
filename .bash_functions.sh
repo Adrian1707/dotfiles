@@ -14,6 +14,10 @@ gac() {
   git commit -m "$*"
 }
 
+gitchange(){
+  git config --local user.email "$*"
+}
+
 #Pull down from master all active git repositories in YGT
 pull() {
 ssh-add ~/.ssh/ygt_id_rsa
@@ -34,7 +38,6 @@ ali(){
 # Git branch in prompt.
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-
 }
 
 port(){

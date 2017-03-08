@@ -19,7 +19,7 @@ source '/Users/adrianbooth/google-cloud-sdk/completion.bash.inc'
 
 # Set CLICOLOR if you want Ansi Colors in iTerm2
 export CLICOLOR=1
-
+export HISTCONTROL=ignoredups
 # Set colors to match iTerm2 Terminal Colors
 export TERM=xterm-256color
 export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "

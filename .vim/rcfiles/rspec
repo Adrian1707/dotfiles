@@ -1,0 +1,6 @@
+" RSpec.vim mappings
+
+let g:rspec_command = "!bundle exec rspec --drb {spec} -fd"
+map <space>t :call RunCurrentSpecFile()<CR>
+map <space>n :call RunNearestSpec()<CR>
+

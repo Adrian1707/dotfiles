@@ -1,0 +1,33 @@
+
+" bind K to grep word under cursor
+nmap K :Ag "\b<C-R><C-W>\b"<CR>:cw<CR>
+nmap <space>f :Ag<space>
+
+" enter a command to substitute all occurrences of the word under the cursor
+nnoremap <space>r :%s/\<<C-r><C-w>\>/
+
+" Map tab key to next buffer
+nmap <Tab> :bnext<CR>
+map <C-K> :bnext<CR>
+map <C-J> :bprev<CR>
+"Map space key and w to save
+nmap <Space>s :w<CR>
+nmap <Space>q :qa!<CR>
+
+"Map l key to right pane and h key to left pane
+map <C-L> <C-w>w
+map <C-H> <C-w>p
+
+"map = and -  to end and beginning of line. More intuitive and easy on the fingers
+nnoremap = $
+nnoremap - 0
+
+" remap space and d to delete buffer command
+nmap <Space>d :bd <Space>
+
+"remap gc comment keys to space c
+nmap <Space>c gc
+
+" Bind the space and b key to buffers list
+cmap <space>b :buffers<CR>:buffer<Space>
+
