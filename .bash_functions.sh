@@ -14,6 +14,7 @@ gac() {
   git commit -m "$*"
 }
 
+# change local github email in project
 gitchange(){
   git config --local user.email "$*"
 }
@@ -35,6 +36,10 @@ ali(){
   alias | grep "$*"
 }
 
+f(){
+  type "$*"
+}
+
 # Git branch in prompt.
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
@@ -46,5 +51,12 @@ port(){
 
 removeswp(){
   find . -name "*.swp" | xargs rm -f
+}
+
+ccache(){
+ lb1cache
+ echo Load balancer03 cleared
+ lb2cache
+ echo Load balancer04 cleared
 }
 

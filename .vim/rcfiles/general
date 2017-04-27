@@ -28,3 +28,4 @@ set expandtab
 "Do not enter Ex mode ever
 nmap Q <nop>
 
+set buftype: " "

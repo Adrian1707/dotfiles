@@ -22,7 +22,7 @@ export CLICOLOR=1
 export HISTCONTROL=ignoredups
 # Set colors to match iTerm2 Terminal Colors
 export TERM=xterm-256color
-export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
+export PS1="\W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 
 # export PATH="$PATH:/Users/adrianbooth/Desktop/"
 

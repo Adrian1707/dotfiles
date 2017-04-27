@@ -1,11 +1,4 @@
 " fugitive git bindings
 
-nmap <space>ga :Git add %:p<CR><CR>
-nmap <space>gs :Gstatus<CR>
-nmap <space>gc :Gcommit -v -q<CR>
-nmap <space>gd :Gdiff<CR>
-nmap <space>gl :silent! Glog<CR>:bot copen<CR>
-nmap <space>gb :Git branch<Space>
-nmap <space>gco :Git checkout<Space>
 nmap <space>gbl :Gblame <Space>
 

@@ -17,6 +17,7 @@ Plugin 'luochen1990/rainbow'
 Plugin 'tpope/vim-surround'
 Plugin 'elmcast/elm-vim'
 Plugin 'thoughtbot/vim-rspec'
+Plugin 'skwp/greplace.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 filetype plugin on
