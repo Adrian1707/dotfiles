@@ -60,3 +60,7 @@ ccache(){
  echo Load balancer04 cleared
 }
 
+
+runtest(){
+  ant -f gwt/build.xml -Dtest.include="**/$1.java" test.dev
+}

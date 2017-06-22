@@ -30,8 +30,8 @@ alias varnish="sshlbstg -t 'sudo varnishadm ban.url .'"
 alias sshstaging='echo Port forwarding to localhost:4999;ssh www-data@staging-actual.yourgolftravel.com -L4999:localhost:5984'
 alias salesproduction='echo Port forwarding to localhost:5985;ssh www-data@wss-ygt-ui01.corp.palatinategroup.com -L5985:wss-ygt-db01:5984'
 alias salesstaging='ssh www-data@sales-staging.corp.palatinategroup.com -L 1999:localhost:5984'
+alias admin01='echo "Port forwarding couchdb01 to 5984:3999"; ssh www-data@admin-actual.yourgolftravel.com -L3999:couchdb01:5984'
 alias admin02='echo "Port forwarding couchdb02 to 5984:3999"; ssh www-data@admin-actual.yourgolftravel.com -L3999:couchdb02:5984'
-alias admin01='echo "Port forwarding couchdb02 to 5984:3999"; ssh www-data@admin-actual.yourgolftravel.com -L3999:couchdb01:5984'
 alias ssh03="ssh www-data@ygt-frontend03.yourgolftravel.com"
 alias ssh04="ssh www-data@ygt-frontend04.yourgolftravel.com"
 
@@ -54,5 +54,9 @@ alias gbclean='git branch --merged master | grep -v "master$" | xargs git branch
 alias notes='open ~/workspace/vagabond/workspace/frontend_notes'
 
 # YGT DEPLOYMENT
-alias staging='bundle exec cap staging deploy'
+alias stagingm='bundle exec cap staging deploy'
+alias staging='bundle exec cap staging deploy MANIFEST=false'
 
+# SALES ALIASES
+alias com='bundle exec rake gwt:compile'
+alias deploystagingsales='bundle exec cap staging deploy HOSTS=sales-staging.corp.palatinategroup.com'

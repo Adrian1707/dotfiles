@@ -6,6 +6,8 @@ done;
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+nvm use 6.2.2
+
 # The next line updates PATH for the Google Cloud SDK.
 source '/Users/adrianbooth/google-cloud-sdk/path.bash.inc'
 
