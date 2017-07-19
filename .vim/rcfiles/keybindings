@@ -1,6 +1,7 @@
-
 " bind K to grep word under cursor
 nmap K :Ag "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+" Globally search for all instances of word in project
 nmap <space>f :Ag<space>
 
 " enter a command to substitute all occurrences of the word under the cursor
@@ -13,6 +14,9 @@ map <C-J> :bprev<CR>
 "Map space key and w to save
 nmap <Space>s :w<CR>
 nmap <Space>q :qa!<CR>
+
+" Set folding to Space l
+nmap <Space>l :set foldmethod=syntax<CR>
 
 "Map l key to right pane and h key to left pane
 map <C-L> <C-w>w
