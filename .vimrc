@@ -1,6 +1,5 @@
 execute pathogen#infect()
 syntax on
-map <C-n> :NERDTreeToggle<CR>
 autocmd BufWritePre * :%s/\s\+$//e " Delete trailing spaces
 " Search files using CTRL-P
 set runtimepath^=~/.vim/bundle/ctrlp.vim

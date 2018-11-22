@@ -5,7 +5,6 @@ Plugin 'VundleVim/Vundle.vim'
 " Plugin for colorschemes
 Plugin 'flazz/vim-colorschemes'
 "Plugin for autocomplete
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'rking/ag.vim'
@@ -17,6 +16,10 @@ Plugin 'luochen1990/rainbow'
 Plugin 'tpope/vim-surround'
 Plugin 'elmcast/elm-vim'
 Plugin 'thoughtbot/vim-rspec'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'ervandew/supertab'
+Plugin 'kien/ctrlp.vim'
 Plugin 'skwp/greplace.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
