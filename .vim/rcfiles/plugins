@@ -14,13 +14,14 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'luochen1990/rainbow'
 Plugin 'tpope/vim-surround'
-Plugin 'elmcast/elm-vim'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ervandew/supertab'
 Plugin 'kien/ctrlp.vim'
-Plugin 'skwp/greplace.vim'
+Plugin 'brooth/far.vim'
+Plugin 'tpope/vim-endwise'
+Plugin 'alvan/vim-closetag'
 call vundle#end()            " required
 filetype plugin indent on    " required
 filetype plugin on

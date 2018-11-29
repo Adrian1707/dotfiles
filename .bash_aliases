@@ -7,6 +7,7 @@ alias bsh='vim ~/.dotfiles/.bash_profile'
 alias vimrc='vim ~/.dotfiles/.vim/rcfiles'
 alias tmc='vim ~/.dotfiles/tmux_conf'
 alias ..='cd ..'
+alias p='cd ~/Documents/workspace'
 
 # GIT ALIASES
 alias gco='git checkout'
@@ -19,6 +20,5 @@ alias gp='git pull'
 alias gl='git log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short -10'
 alias gpush='git push origin HEAD'
 alias gap='git add --patch'
-__git_complete gco _git_checkout
 alias gbclean='git branch --merged master | grep -v "master$" | xargs git branch -d'
 

@@ -29,3 +29,6 @@ set expandtab
 nmap Q <nop>
 
 set buftype: " "
+
+" set closetag extension for erb files
+let g:closetag_filenames = '*.html,*.erb'

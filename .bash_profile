@@ -1,7 +1,8 @@
-for file in ~/.{bash_aliases,bash_functions.sh}; do
+for file in ~/.{bash_prompt,bash_aliases,bash_functions.sh}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 
+source ~/git-completion.bash
 export PATH="$HOME/.rbenv/bin:$PATH"
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
