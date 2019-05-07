@@ -23,6 +23,10 @@ rbenv global 2.5.0
 
 echo "Ruby installed"
 
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+vim +PluginInstall +qall
+
 for file in $( ls -A | grep -vE '\.exclude*|\.git$|\.gitignore|.*.md' ) ; do
       ln -sv "$PWD/$file" "$HOME"
 done
