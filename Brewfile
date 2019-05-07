@@ -8,6 +8,7 @@ brew 'the_silver_searcher'
 brew 'tmux'
 brew 'mysql'
 brew 'go'
+brew 'docker-toolbox'
 
 brew 'rbenv', args: ['HEAD']
 brew 'ruby-build', args: ['HEAD']
