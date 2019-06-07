@@ -1,5 +1,6 @@
-execute pathogen#infect()
 syntax on
+
+map <C-n> :NERDTreeToggle<CR>
 autocmd BufWritePre * :%s/\s\+$//e " Delete trailing spaces
 " Search files using CTRL-P
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -16,9 +17,8 @@ let g:ackprg = 'ag --nogroup --nocolor --column  --ignore-dir app/assets/javascr
 " Call elm-format on save
 let g:elm_format_autosave = 1
 
-" import everything from the rcfiles directory
 function! s:SourceConfigFilesIn(directory)
-  let directory_splat = '~/.vim/' . a:directory . '/*'
+  let directory_splat = '~/dotfiles/.vim/' . a:directory . '/*'
   for config_file in split(glob(directory_splat), '\n')
     if filereadable(config_file)
       execute 'source' config_file
@@ -33,4 +33,3 @@ call s:SourceConfigFilesIn('rcfiles')
 
 
 "Remove all trailing whitespace by default
-autocmd BufWritePre *.rb :%s/\s\+$//e
