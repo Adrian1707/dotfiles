@@ -5,7 +5,7 @@ function cd {
 
 #cds into projects folder with all YGT repos
 function p {
- builtin cd ~/workspace/vagabond/workspace/projects/$1 && ls
+ builtin cd ~/Documents/workspace && ls
 }
 
 #shorthand for git add all and commit

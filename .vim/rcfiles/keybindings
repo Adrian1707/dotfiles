@@ -9,6 +9,7 @@ nnoremap <space>r :%s/\<<C-r><C-w>\>/
 
 " Map tab key to next buffer
 nmap <Tab> :bnext<CR>
+nmap <S-Tab> :bprev<CR>
 map <C-K> :bnext<CR>
 map <C-J> :bprev<CR>
 "Map space key and w to save
